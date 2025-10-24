@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kishi Elisha Website</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background: url(https://scontent.fceb2-2.fna.fbcdn.net/v/t39.30808-6/504748721_4246374142262710_5580449835778331576_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeE9vof9xNR78LOctxu7jtR4pl66cEBDC3OmXrpwQEMLczpLKtkl_t7NLl-acSYBY2DrNnwMOF_iwTBUyelirhHd&_nc_ohc=IkpWwNOv4jcQ7kNvwEoPORH&_nc_oc=AdkyL7QwwPJrzJbXv2SUxLvkhm0oXLXaHaSkBgBYPKQEQTHEtto8KmWOffrrQC-dc-PE1-ZmkrG6SMUAt0Ls4xSl&_nc_zt=23&_nc_ht=scontent.fceb2-2.fna&_nc_gid=DOozpcjeQdsmv4qPrjJjbQ&oh=00_Aff5sN7mIVCojN7fd1pouZ0vfXSDJBxzqSxyJoHHkWWtJg&oe=68FFE2AC) no-repeat center center fixed;
+      background-size: cover;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+
+    /* Your name fixed on the left */
+    h6.name-left {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      font-weight: 700;
+      font-size: 1rem;
+      color: #ff66b3;
+      text-shadow:
+        0 0 5px #ff66b3,
+        0 0 10px #ff3399;
+      z-index: 100;
+      user-select: none;
+      font-family: 'Arial', sans-serif;
+    }
+
+    .hero {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 50px 40px;
+      border-radius: 25px;
+      box-shadow: 0 0 25px rgba(255 255 255 / 0.2);
+      max-width: 600px;
+      animation: fadeInScale 1.5s ease forwards;
+    }
+
+    /* Animate hero fade and scale */
+    @keyframes fadeInScale {
+      0% {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 15px;
+      font-weight: 900;
+      color: #fff6ff;
+      text-shadow:
+        0 0 5px #fff,
+        0 0 15px #ec4c9f,
+        0 0 30px #ff66b3;
+      animation: glow 2.5s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow:
+          0 0 5px #fff,
+          0 0 15px #ff99cc,
+          0 0 30px #ff66b3;
+      }
+      to {
+        text-shadow:
+          0 0 10px #ffccdd,
+          0 0 25px #ff6699,
+          0 0 40px #ff3399;
+      }
+    }
+
+    p {
+      font-size: 1.3em;
+      margin-bottom: 40px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+      color: #ffffff;
+      letter-spacing: 0.05em;
+      line-height: 1.5;
+      font-weight: 500;
+      animation: fadeInText 2.5s ease forwards;
+      animation-delay: 0.8s;
+      opacity: 0;
+    }
+
+    @keyframes fadeInText {
+      to {
+        opacity: 1;
+      }
+    }
+
+    .enter-btn {
+      text-decoration: none;
+      background-color: #000;
+      color: #ffffff;
+      padding: 15px 35px;
+      font-size: 1.2em;
+      border-radius: 30px;
+      font-weight: 700;
+      box-shadow:
+        0 0 10px #000,
+        0 0 20px #ff66b3,
+        0 0 30px #ff66b3;
+      transition: all 0.3s ease;
+      display: inline-block;
+      animation: pulseBtn 3s ease-in-out infinite;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Pulse animation for button */
+    @keyframes pulseBtn {
+      0%, 100% {
+        box-shadow:
+          0 0 10px #1f21cc,
+          0 0 20px #ff66b3,
+          0 0 30px #ff66b3;
+        transform: scale(1);
+      }
+      50% {
+        box-shadow:
+          0 0 20px #ff99cc,
+          0 0 40px #ff3399,
+          0 0 50px #ff3399;
+        transform: scale(1.05);
+      }
+    }
+
+    .enter-btn:hover {
+      background-color: #ca7ad1;
+      box-shadow:
+        0 0 15px #ff3399,
+        0 0 30px #ff3399,
+        0 0 40px #c238dd;
+      color: #080202;
+      transform: scale(1.1);
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2.2em;
+      }
+      p {
+        font-size: 1em;
+      }
+      .hero {
+        padding: 30px 20px;
+      }
+      .enter-btn {
+        padding: 12px 25px;
+        font-size: 1em;
+      }
+      h6.name-left {
+        font-size: 0.9rem;
+        top: 10px;
+        left: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h6 class="name-left">Hi!</h6>
+  <div class="hero">
+    <h1>Welcome to My Website</h1>
+    <p>Hi! I’m <strong>Kishi Elisha</strong>. Get to know more about me and goals in life. Let's go!!!</p>
+    <a href="website 1.html" class="enter-btn">Enter</a>
+  </div>
+</body>
+</html>
+504748721_4246374142262710_5580449835778331576_n.jpg
